@@ -13,7 +13,6 @@ M.navigate_to = function(nodes)
     end
 
     local names = nodes:names()
-    print(vim.inspect(names))
 	require("telescope.pickers").new({}, {
 		prompt_title = "navigation",
 		finder = require("telescope.finders").new_table({
