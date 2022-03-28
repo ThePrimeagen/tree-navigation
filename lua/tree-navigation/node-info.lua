@@ -23,14 +23,13 @@ end
 
 function NodeInfo:names()
     local lang = config.get_lang(self.ft);
-    print("self", self.type)
     if self.type == NodeInfo.Method then
         return vim.tbl_map(function(node)
             return lang.get_method_name(node)
         end, self.nodes)
     end
 
-    return "NOT FOUND"
+    return "NOT IMPLEMENTED"
 end
 
 function NodeInfo:locations()
